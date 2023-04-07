@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/715b080ab1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header
+      class="flex justify-between items-center p-4 pl-4 w-full xl:px-[152px] lg:py-8 sm:py-4 sm:px-8"
+    >
+      <div class="flex items-center sm:gap-8">
+        <a href="../index.html">
+          <img
+            src="../image/Logo.png"
+            alt="logo"
+            class="w-[100px] h-7 lg:w-auto lg:h-auto"
+          />
+        </a>
+        <form class="relative hidden sm:block">
+          <input
+            type="text"
+            placeholder="¿Qué deseas buscar?"
+            class="outline-none rounded-[20px] border-none bg-colorMain py-2 sm:pr-[70px] lg:pr-[191px] pl-4 text-sm"
+          />
+          <div class="text-colorPlaceholder absolute right-4 top-2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form>
+      </div>
+      <div>
+        <button
+          class="border py-3 sm:px-[4.5px] px-[15.5px] border-colorBtn lg:py-4 lg:px-[16.5px] text-sm font-semibold text-colorBtn lg:text-base lg:font-normal"
+        >
+          Menú Administrador
+        </button>
+      </div>
+
+      <div class="w-6 h-6 text-[17px] text-center sm:hidden">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </header>
+    <main class="bg-colorMain">
+      <!-- Agregar nuevo producto -->
+      <div
+        class="p-4 sm:p-8 lg:py-16 lg:px-0 lg:flex lg:items-center lg:justify-center"
+      >
+        <div class="flex flex-col gap-4 lg:w-[552px]">
+          <h2 class="text-[22px] text-colorTitulo font-bold lg:text-[32px]">
+            Agregar nuevo producto
+          </h2>
+          <form class="text-colorPlaceholder flex flex-col gap-4">
+            <div class="relative">
+              <input
+                name="urlImagen"
+                id="urlImagen"
+                type="text"
+                placeholder="URL de la imagen"
+                class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
+              />
+              <label
+                for="urlImagen"
+                class="absolute left-3 top-1/4 text-lg transition-all"
+                >URL de la imagen</label
+              >
+            </div>
+            <div class="relative">
+              <input
+                name="categoria"
+                id="categoria"
+                type="text"
+                placeholder="Categoría"
+                class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
+              />
+              <label
+                for="categoria"
+                class="absolute left-3 top-1/4 text-lg transition-all"
+                >Categoría</label
+              >
+            </div>
+            <div class="relative">
+              <input
+                name="nombreProducto"
+                id="nombreProducto"
+                type="text"
+                placeholder="Nombre del producto"
+                class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
+              />
+              <label
+                for="nombreProducto"
+                class="absolute left-3 top-1/4 text-lg transition-all"
+                >Nombre del producto</label
+              >
+            </div>
+            <div class="relative">
+              <input
+                name="precioProducto"
+                id="precioProducto"
+                type="text"
+                placeholder="Precio del producto"
+                class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
+              />
+              <label
+                for="precioProducto"
+                class="absolute left-3 top-1/4 text-lg transition-all"
+                >Precio del producto</label
+              >
+            </div>
+            <div class="relative">
+              <textarea
+                name="descripcionProducto"
+                id="descripcionProducto"
+                placeholder="Descripción del producto"
+                class="outline-none w-full px-3 pt-6 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-[82px] resize-none"
+              ></textarea>
+              <label
+                for="descripcionProducto"
+                class="absolute left-3 top-1/4 text-lg transition-all"
+                >Descripción del producto</label
+              >
+            </div>
+          </form>
+          <button
+            id="btnAddProductSave"
+            class="py-4 border-none bg-colorBtn text-white w-full"
+          >
+            Agregar Producto
+          </button>
+        </div>
+      </div>
+      <!-- Contactos -->
+      <section class="bg-colorContactos p-4 sm:p-8 lg:py-16">
+        <div
+          class="flex flex-col gap-8 sm:flex-row sm:gap-4 lg:gap-8 xl:gap-28"
+        >
+          <div
+            class="flex flex-col justify-center items-center gap-4 sm:w-[254px] sm:items-start lg:flex-row lg:gap-8 xl:gap-28 lg:w-auto xl:pl-[120px]"
+          >
+            <img src="../image/Logo.png" alt="logo" />
+
+            <ul
+              class="text-colorTitulo text-base font-medium text-center gap-4 flex flex-col sm:gap-6 sm:text-start lg:w-[176px]"
+            >
+              <li>
+                <a href="#">Quienes somos</a>
+              </li>
+              <li>
+                <a href="#">Política de privacidad</a>
+              </li>
+              <li>
+                <a href="#">Programa de fidelidad</a>
+              </li>
+              <li>
+                <a href="#">Nuestras tiendas</a>
+              </li>
+              <li>
+                <a href="#">Quiero ser franquiciado</a>
+              </li>
+              <li>
+                <a href="#">Anúncie aquí</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sm:w-[486px] lg:w-[512px] xl:w-[560px] 2xl:w-[860px]">
+            <h3 class="text-base font-bold mb-2">Hable con nosotros</h3>
+            <form class="flex flex-col gap-4 text-colorPlaceholder">
+              <div class="relative">
+                <input
+                  id="contactNombre"
+                  type="text"
+                  placeholder="Nombre"
+                  class="px-3 pt-4 h-14 outline-none placeholder:hidden placeholder:text-transparent text-colorTitulo w-full form__contact"
+                />
+                <label
+                  for="contactNombre"
+                  class="absolute left-3 top-1/4 text-lg"
+                  >Nombre</label
+                >
+              </div>
+              <div class="relative">
+                <textarea
+                  id="contactMensaje"
+                  placeholder="Escribe tu mensaje"
+                  class="px-3 pt-6 h-[82px] outline-none placeholder:hidden placeholder:text-transparent text-colorTitulo w-full form__contact resize-none"
+                ></textarea>
+                <label
+                  for="contactMensaje"
+                  class="absolute left-3 top-1/4 text-lg"
+                  >Escribe tu mensaje</label
+                >
+              </div>
+            </form>
+            <button
+              class="text-sm font-semibold py-3 px-4 bg-colorBtn text-white mt-2 border-none"
+            >
+              Enviar mensaje
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="p-8 text-center font-medium text-colorTitulo">
+      <h3>Desarrollado por Retford O'briam Julcarima Baldeón</h3>
+      <h3>2023</h3>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
