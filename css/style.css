@@ -692,10 +692,6 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/public\/image\/Banner\.png\'\)\] {
-  background-image: url('/public/image/Banner.png');
-}
-
 .bg-\[url\(\'\.\.\/image\/Banner\.png\'\)\] {
   background-image: url('../image/Banner.png');
 }
