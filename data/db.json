@@ -1,0 +1,11 @@
+{
+  "productos": [
+    {
+      "img": "../image/categorias/consolas/consola5.png",
+      "nombre": "RR",
+      "precio": "1500",
+      "categoria": "Consolas",
+      "id": "8b4adf1b-87d8-4eed-82d4-a88bc3c2407e"
+    }
+  ]
+}
