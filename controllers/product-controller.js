@@ -9,7 +9,7 @@ const createNewProduct = (img, nombre, precio, id) => {
       src=${img}
       alt="star1"
       width="176" height="176"
-      class="w-full h-36 sm:h-44 lg:w-44 object-contain"
+      class="w-full h-36 sm:h-44 sm:w-44 object-cover"
 
     />
     <div
