@@ -13,15 +13,17 @@ const obtenerInformacion = async () => {
     const categoryProduct = document.querySelector('[data-categoria]')
     const nameProduct = document.querySelector('[data-nombre]')
     const priceProduct = document.querySelector('[data-precio]')
+    const description = document.querySelector('[data-descripcion]')
 
-    const { categoria, img, nombre, precio } =
+    const { categoria, img, nombre, precio, descripcion } =
       await productServices.detailProduct(id)
 
-    if (categoria && img && nombre && precio) {
+    if (categoria && img && nombre && precio && descripcion) {
       urlProduct.value = img
       categoryProduct.value = categoria
       nameProduct.value = nombre
       priceProduct.value = precio
+      description.value = descripcion
     } else {
       throw new Error()
     }
@@ -38,12 +40,20 @@ formProduct.addEventListener('submit', (e) => {
   const categoryProduct = document.querySelector('[data-categoria]').value
   const nameProduct = document.querySelector('[data-nombre]').value
   const priceProduct = document.querySelector('[data-precio]').value
+  const description = document.querySelector('[data-descripcion]').value
   const url = new URL(window.location)
   console.log(url)
   const id = url.searchParams.get('id')
   console.log(id)
   productServices
-    .updateProduct(urlProduct, nameProduct, priceProduct, id)
+    .updateProduct(
+      urlProduct,
+      nameProduct,
+      priceProduct,
+      id,
+      categoryProduct,
+      description
+    )
     .then(() => {
       window.location.href = '/public/pages/products.html'
     })
