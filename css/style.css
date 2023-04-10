@@ -572,6 +572,14 @@ video {
   height: 3.5rem;
 }
 
+.h-36 {
+  height: 9rem;
+}
+
+.h-44 {
+  height: 11rem;
+}
+
 .h-48 {
   height: 12rem;
 }
@@ -584,10 +592,6 @@ video {
   height: 1.75rem;
 }
 
-.h-\[145\.913px\] {
-  height: 145.913px;
-}
-
 .h-\[362px\] {
   height: 362px;
 }
@@ -596,16 +600,8 @@ video {
   height: 82px;
 }
 
-.h-36 {
-  height: 9rem;
-}
-
-.max-h-\[145\.913px\] {
-  max-height: 145.913px;
-}
-
-.min-h-\[145\.913px\] {
-  min-height: 145.913px;
+.h-\[270px\] {
+  height: 270px;
 }
 
 .w-4 {
@@ -620,10 +616,6 @@ video {
   width: 100px;
 }
 
-.w-\[147\.6px\] {
-  width: 147.6px;
-}
-
 .w-\[275px\] {
   width: 275px;
 }
@@ -632,8 +624,8 @@ video {
   width: 100%;
 }
 
-.w-36 {
-  width: 9rem;
+.w-\[375\.2px\] {
+  width: 375.2px;
 }
 
 .resize-none {
@@ -890,6 +882,10 @@ video {
   outline-offset: 2px;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -955,8 +951,8 @@ video {
     display: none;
   }
 
-  .sm\:h-\[174\.988px\] {
-    height: 174.988px;
+  .sm\:h-44 {
+    height: 11rem;
   }
 
   .sm\:h-\[295px\] {
@@ -967,20 +963,12 @@ video {
     height: 352px;
   }
 
-  .sm\:h-\[174px\] {
-    height: 174px;
+  .sm\:h-\[182\.788px\] {
+    height: 182.788px;
   }
 
-  .sm\:h-44 {
-    height: 11rem;
-  }
-
-  .sm\:max-h-\[174px\] {
-    max-height: 174px;
-  }
-
-  .sm\:min-h-\[174px\] {
-    min-height: 174px;
+  .sm\:w-44 {
+    width: 11rem;
   }
 
   .sm\:w-6 {
@@ -993,14 +981,6 @@ video {
 
   .sm\:w-\[486px\] {
     width: 486px;
-  }
-
-  .sm\:w-full {
-    width: 100%;
-  }
-
-  .sm\:w-44 {
-    width: 11rem;
   }
 
   .sm\:grid-cols-4 {
@@ -1111,8 +1091,8 @@ video {
     height: auto;
   }
 
-  .lg\:h-44 {
-    height: 11rem;
+  .lg\:h-\[403px\] {
+    height: 403px;
   }
 
   .lg\:w-\[176px\] {
@@ -1139,12 +1119,8 @@ video {
     width: 100%;
   }
 
-  .lg\:w-44 {
-    width: 11rem;
-  }
-
-  .lg\:min-w-\[176px\] {
-    min-width: 176px;
+  .lg\:w-\[560px\] {
+    width: 560px;
   }
 
   .lg\:grid-cols-6 {

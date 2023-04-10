@@ -42,29 +42,31 @@
     </header>
     <main class="bg-colorMain">
       <!-- Single Product -->
-      <div
-        class="sm:p-8 sm:flex sm:gap-4 lg:items-center lg:py-16 lg:px-[152px]"
-      >
-        <img
-          src="../image/products/product.png"
-          alt="product"
-          class="sm:w-[254px] lg:w-full"
-        />
-        <div class="p-4 flex flex-col gap-2 text-colorTitulo sm:p-0">
-          <h2 class="text-[22px] font-medium lg:text-[52px] lg:font-medium">
-            Producto XYZ
-          </h2>
-          <span class="font-bold">$ 60,00</span>
-          <p class="text-sm">
-            Voluptas voluptatum quibusdam similique, class debitis alias
-            maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis,
-            minima malesuada habitasse distinctio sequi aliqua malesuada.
-            Quisque deleniti proin expedita, aliquid litora. Iste recusandae?
-            Commodo, quia ridiculus doloribus vero dictum? Penatibus donec
-            placeat faucibus, dolorum do. Animi porta anim magnam
-          </p>
-        </div>
-      </div>
+      <section id="cardSingleProduct">
+        <!-- <div
+          class="sm:p-8 sm:flex sm:gap-4 lg:items-center lg:py-16 lg:px-[152px]"
+        >
+          <img
+            src="../image/products/product.png"
+            alt="product"
+            class="sm:w-[254px] lg:w-full"
+          />
+          <div class="p-4 flex flex-col gap-2 text-colorTitulo sm:p-0">
+            <h2 class="text-[22px] font-medium lg:text-[52px] lg:font-medium">
+              Producto XYZ
+            </h2>
+            <span class="font-bold">$ 60,00</span>
+            <p class="text-sm">
+              Voluptas voluptatum quibusdam similique, class debitis alias
+              maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis,
+              minima malesuada habitasse distinctio sequi aliqua malesuada.
+              Quisque deleniti proin expedita, aliquid litora. Iste recusandae?
+              Commodo, quia ridiculus doloribus vero dictum? Penatibus donec
+              placeat faucibus, dolorum do. Animi porta anim magnam
+            </p>
+          </div>
+        </div> -->
+      </section>
       <!-- Productos Similares -->
       <section>
         <div
@@ -76,8 +78,8 @@
                 Productos similares
               </h2>
             </div>
-            <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
-              <div class="flex flex-col gap-2">
+            <div id="relatedProductCards" class="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
+              <!-- <div class="flex flex-col gap-2">
                 <img
                   src="../image/categorias/star-wars/star1.png"
                   alt="star1"
@@ -154,7 +156,7 @@
                 <a href="#" class="text-sm font-bold text-colorBtn sm:text-base"
                   >Ver producto</a
                 >
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -234,5 +236,9 @@
       <h3>Desarrollado por Retford O'briam Julcarima Baldeón</h3>
       <h3>2023</h3>
     </footer>
+    <script
+      src="../controllers/single-product-controller.js"
+      type="module"
+    ></script>
   </body>
 </html>

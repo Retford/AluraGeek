@@ -8,15 +8,38 @@ const createProduct = (img, nombre, precio, categoria, descripcion) => {
     headers: {
       'Content-type': 'application/json'
     },
-    body: JSON.stringify({ img, nombre, precio, categoria, descripcion, id: uuid.v4() })
+    body: JSON.stringify({
+      img,
+      nombre,
+      precio,
+      categoria,
+      descripcion,
+      id: uuid.v4()
+    })
+  }).then((res) => {
+    if (res.ok) {
+      console.log('Se cargó el producto correctamente')
+      return res.body
+    } else {
+      throw new Error('No se pudo crear el producto')
+    }
   })
 }
 
 const deleteProduct = (id) => fetch(`${URL_API}/${id}`, { method: 'DELETE' })
 
-const detailProduct = (id) => { return fetch(`${URL_API}/${id}`).then((res) => res.json()) }
+const detailProduct = (id) => {
+  return fetch(`${URL_API}/${id}`).then((res) => res.json())
+}
 
-const updateProduct = async (img, nombre, precio, id, categoria, descripcion) => {
+const updateProduct = async (
+  img,
+  nombre,
+  precio,
+  id,
+  categoria,
+  descripcion
+) => {
   try {
     return await fetch(`${URL_API}/${id}`, {
       method: 'PUT',

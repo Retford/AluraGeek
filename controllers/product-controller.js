@@ -2,14 +2,15 @@ import { productServices } from '../services/product-service.js'
 
 const createNewProduct = (img, nombre, precio, id) => {
   const divProduct = document.createElement('div')
+  const titulo = id.slice(0, 8)
   divProduct.classList.add('flex', 'flex-col', 'gap-2')
   const product = `<div class="flex flex-col gap-2">
   <div class="relative">
     <img
-      src=${img}
+      src="${img}"
       alt="star1"
       width="176" height="176"
-      class="w-full h-36 sm:h-44 sm:w-44 object-cover"
+      class="w-full h-44 object-cover"
 
     />
     <div
@@ -23,12 +24,14 @@ const createNewProduct = (img, nombre, precio, id) => {
     </a>
     </div>
   </div>
+  <a href="/public/pages/single-product.html?id=${id}"
   <h3 class="text-sm font-medium">${nombre}</h3>
+  </a>
   <span class="text-base font-bold text-colorTitulo"
     >S/. ${precio}</span
   >
   <span class="text-sm font-medium text-colorTitulo sm:text-base"
-    ># ${id}</span
+    ># ${titulo}</span
   >
 </div>`
   divProduct.innerHTML = product
@@ -36,8 +39,6 @@ const createNewProduct = (img, nombre, precio, id) => {
   trashIcon.addEventListener('click', async () => {
     try {
       const id = trashIcon.id
-      console.log(trashIcon)
-      console.log(id)
       await productServices.deleteProduct(id)
     } catch (err) {
       console.log(err)

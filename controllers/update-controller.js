@@ -6,6 +6,8 @@ const obtenerInformacion = async () => {
   try {
     const url = new URL(window.location)
     const id = url.searchParams.get('id')
+    console.log(url)
+    console.log(id)
 
     if (id === null) return
 
@@ -37,14 +39,12 @@ obtenerInformacion()
 formProduct.addEventListener('submit', (e) => {
   e.preventDefault()
   const urlProduct = document.querySelector('[data-url]').value
-  const categoryProduct = document.querySelector('[data-categoria]').value
+  const categoryProduct = document.querySelector('[data-categoria]').value.toLowerCase()
   const nameProduct = document.querySelector('[data-nombre]').value
   const priceProduct = document.querySelector('[data-precio]').value
   const description = document.querySelector('[data-descripcion]').value
   const url = new URL(window.location)
-  console.log(url)
   const id = url.searchParams.get('id')
-  console.log(id)
   productServices
     .updateProduct(
       urlProduct,
