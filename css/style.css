@@ -548,16 +548,6 @@ video {
   top: 0.5rem;
 }
 
-.my-\[97px\] {
-  margin-top: 97px;
-  margin-bottom: 97px;
-}
-
-.my-\[49px\] {
-  margin-top: 49px;
-  margin-bottom: 49px;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -744,10 +734,6 @@ video {
   padding: 2rem;
 }
 
-.p-\[97px\] {
-  padding: 97px;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -786,16 +772,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-\[97px\] {
-  padding-top: 97px;
-  padding-bottom: 97px;
-}
-
-.py-\[49px\] {
-  padding-top: 49px;
-  padding-bottom: 49px;
 }
 
 .py-60 {
@@ -837,10 +813,6 @@ video {
 
 .pt-\[6px\] {
   padding-top: 6px;
-}
-
-.pt-\[97px\] {
-  padding-top: 97px;
 }
 
 .text-center {
@@ -951,6 +923,11 @@ video {
   display: block;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
+}
+
+#precioProducto {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
 .placeholder\:hidden::-moz-placeholder {
