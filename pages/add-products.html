@@ -37,6 +37,7 @@
       </div>
       <div>
         <button
+          id="btnAdministrador"
           class="border py-3 sm:px-[4.5px] px-[15.5px] border-colorBtn lg:py-4 lg:px-[16.5px] text-sm font-semibold text-colorBtn lg:text-base lg:font-normal"
         >
           Menú Administrador
@@ -80,6 +81,8 @@
                 type="text"
                 placeholder="Categoría"
                 required
+                pattern="[a-zA-Z ]{5,15}"
+                title="Debe de tener solo letras, un mínimo de 5 letras y un máximo de 15"
                 class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
                 data-categoria
               />
@@ -96,6 +99,8 @@
                 type="text"
                 placeholder="Nombre del producto"
                 required
+                pattern="[a-zA-Z0-9 ]{3,30}"
+                title="Debe de tener un mínimo de 3 letras y un máximo de 30"
                 class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
                 data-nombre
               />
@@ -109,7 +114,9 @@
               <input
                 name="precioProducto"
                 id="precioProducto"
-                type="text"
+                type="number"
+                min="100"
+                max="30000"
                 placeholder="Precio del producto"
                 required
                 class="outline-none w-full px-3 pt-4 placeholder:hidden text-colorTitulo placeholder:text-transparent form__add__product h-14"
@@ -209,7 +216,7 @@
               </div>
             </form>
             <button
-              class="text-sm font-semibold py-3 px-4 bg-colorBtn text-white mt-2 border-none"
+              class="enviar-correo text-sm font-semibold py-3 px-4 bg-colorBtn text-white mt-2 border-none"
             >
               Enviar mensaje
             </button>
@@ -221,8 +228,8 @@
       <h3>Desarrollado por Retford O'briam Julcarima Baldeón</h3>
       <h3>2023</h3>
     </footer>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script> -->
     <script src="../js/index.js"></script>
+    <script src="../js/validacion/correo.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     <script src="../controllers/register-controller.js" type="module"></script>
   </body>

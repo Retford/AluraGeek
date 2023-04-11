@@ -42,28 +42,42 @@
     <main class="bg-colorMain">
       <!-- Inicio de Sesión -->
       <div
-        class="h-[362px] flex justify-center items-center sm:h-[295px] lg:h-[474px]"
+        class="py-60 h-[362px] flex justify-center items-center sm:h-[295px] lg:h-[474px]"
       >
         <div class="flex flex-col gap-4 items-center w-[275px] lg:w-[423px]">
           <h2 class="font-bold lg:text-lg">Iniciar Sesión</h2>
-          <form class="flex flex-col gap-4 w-full">
-            <input
-              type="email"
-              placeholder="Escriba su correo electrónico"
-              class="outline-none text-colorPlaceholder pt-2 pb-[13px] pl-3 border-none"
-            />
-            <input
-              type="password"
-              placeholder="Escriba su contraseña"
-              class="outline-none text-colorPlaceholder pt-[6px] pl-3 pb-[15px]"
-            />
+          <form action="products.html" class="flex flex-col gap-4 w-full">
+            <fieldset class="flex flex-col gap-4">
+              <div class="input-container">
+                <input
+                  type="email"
+                  placeholder="Escriba su correo electrónico"
+                  required
+                  class="input w-full outline-none text-colorPlaceholder pt-2 pb-[13px] pl-3 border-none"
+                  data-tipo="email"
+                />
+                <span class="input-message-error hidden"></span>
+              </div>
+              <div class="input-container">
+                <input
+                  type="password"
+                  placeholder="Escriba su contraseña"
+                  required
+                  class="input w-full outline-none text-colorPlaceholder pt-[6px] pl-3 pb-[15px]"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                  title="Debe ser de al menos 6 caracteres, máximo 12, contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales"
+                  data-tipo="password"
+                />
+                <span class="input-message-error hidden"></span>
+              </div>
+            </fieldset>
+
+            <button
+              class="text-white text-sm border-none bg-colorBtn py-3 px-[34px] lg:w-full lg:text-lg lg:font-semibold"
+            >
+              Entrar
+            </button>
           </form>
-          <button
-            id="btnEntrar"
-            class="text-white text-sm border-none bg-colorBtn py-3 px-[34px] lg:w-full lg:text-lg lg:font-semibold"
-          >
-            Entrar
-          </button>
         </div>
       </div>
       <!-- Contactos -->
@@ -129,7 +143,7 @@
               </div>
             </form>
             <button
-              class="text-sm font-semibold py-3 px-4 bg-colorBtn text-white mt-2 border-none"
+              class="enviar-correo text-sm font-semibold py-3 px-4 bg-colorBtn text-white mt-2 border-none"
             >
               Enviar mensaje
             </button>
@@ -141,6 +155,7 @@
       <h3>Desarrollado por Retford O'briam Julcarima Baldeón</h3>
       <h3>2023</h3>
     </footer>
-    <script src="../js/index.js"></script>
+    <script src="../js/validacion/correo.js"></script>
+    <script src="../js/validacion/app.js" type="module"></script>
   </body>
 </html>
